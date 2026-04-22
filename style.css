@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 450px;
+}
+
+/* Title */
+h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input + Button */
+input {
+    padding: 10px;
+    width: 65%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+ 
+/* Weather Result*/
+#weatherResult {
+    margin-top: 20px;
+}
+
+#weatherResult h2 {
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    font-size: 60px;
+    margin: 10px 0;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+/* History */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #007bff;
+    margin: 5px 0;
+}
+
+li button {
+    padding: 2px 6px;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+/* History Container */
+#historyList {
+    margin-top: 15px;
+}
+
+/* Each History item */
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 6px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* City Text */
+.history-item span {
+    color: #4da3ff;
+}
+
+/* Dark Mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .container {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark input {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark button {
+    background: #444;
+}
+
+.dark li {
+    color: #4da3ff;
+}
+
+/* THeme Button Styling */
+.theme-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background: #0056b3;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Dynamic Backgrounds */
+.clear {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+}
+
+.clouds {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rain {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+}
+
+.haze {
+    background: linear-gradient(to right, #757f9a, #d7dde8);
+}
